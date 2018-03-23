@@ -1,7 +1,8 @@
-```
-This is a copy of [Wes Bos's CSS Grid Course](https://CSSGrid.io).
+# Note
+
+This is a copy of [Wes Bos's CSS Grid Course](https://CSSGrid.io). The original starter files are [here](https://github.com/wesbos/css-grid).
+
 I created this copy to keep track my learning progress and avoid commiting to the original repository.
-```
 
 ![](https://res.cloudinary.com/wesbos/image/upload/v1515524452/GRID-social-share_wlfzk3.png)
 
