@@ -21,6 +21,31 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: repeat(10, 1fr);
+    }
+
+    .logo {
+      grid-column: span 2;
+      /* 
+        Order properties start at 0.
+        So, you gotta add the order property to all the same level elements
+      */
+      order: 2;
+    }
+
+    /* 
+      Be aware that using order would mess up the accessibility.
+      Screen-reader would not read as it is in the DOM and not how you styled in CSS.
+      Using order would mess up the highlight (:::selection) as well.
+    */
+    .nav {
+      grid-column: span 8;
+      order: 1;
+    }
+
+    .content {
+      grid-column: 1 / -1;
+      order: 3;
     }
   </style>
 </body>
