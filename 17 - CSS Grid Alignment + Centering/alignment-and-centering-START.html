@@ -20,36 +20,6 @@
     <div class="itm itm8">8</div>
     <div class="itm itm9">9</div>
     <div class="itm itm10">10</div>
-    <div class="itm itm11">11</div>
-    <div class="itm itm12">12</div>
-    <div class="itm itm13">13</div>
-    <div class="itm itm14">14</div>
-    <div class="itm itm15">15</div>
-    <div class="itm itm16">16</div>
-    <div class="itm itm17">17</div>
-    <div class="itm itm18">18</div>
-    <div class="itm itm19">19</div>
-    <div class="itm itm20">20</div>
-    <div class="itm itm21">21</div>
-    <div class="itm itm22">22</div>
-    <div class="itm itm23">23</div>
-    <div class="itm itm24">24</div>
-    <div class="itm itm25">25</div>
-    <div class="itm itm26">26</div>
-    <div class="itm itm27">27</div>
-    <div class="itm itm28">28</div>
-    <div class="itm itm29">29</div>
-    <div class="itm itm30">30</div>
-    <div class="itm itm31">31</div>
-    <div class="itm itm32">32</div>
-    <div class="itm itm33">33</div>
-    <div class="itm itm34">34</div>
-    <div class="itm itm35">35</div>
-    <div class="itm itm36">36</div>
-    <div class="itm itm37">37</div>
-    <div class="itm itm38">38</div>
-    <div class="itm itm39">39</div>
-    <div class="itm itm40">40</div>
   </div>
 
   <style>
@@ -65,12 +35,36 @@
 
       justify-* is row axis
       align-* is column axis
+
+      UNLIKE FLEXBOX — THEY DON'T SWITCH IN DIFFERENT CONTEXT!
     */
 
     .container {
       display: grid;
+      height: 500px;
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      grid-template-columns: repeat(5, 50px);
+      border: 10px solid var(--yellow);
+      /* justify-items: center only goes as wide as the content */
+      /* justify-items default is stretch */
+      /* start end center stretch */
+      justify-items: center;
+      /* grid-template-rows: repeat(5, 100px); */
+      align-items: center;
+      /* we can also use place-items to replace justify-items and align-items */
+      /* browser support is not so great for place-items */
+      /* make sure autoprefixer convert this to both justify-items and align-items */
+      place-items: stretch stretch;
+      justify-content: space-between;
+      align-content: center;
+    }
+
+    .itm {
+      background-color: #fff;
+    }
+
+    .itm1 {
+      justify-self: center;
     }
   </style>
 </body>
